@@ -6,7 +6,8 @@
 //    Updated November 2013 by John Croucher for Cordova 3.0
 //  MIT licensed
 //
-
+#import <Cordova/CDV.h>
+#import "CDVLocalFilesystem.h"
 #import "AudioEncode.h"
 
 @implementation AudioEncode
@@ -18,7 +19,7 @@
 	self.callbackId = command.callbackId;
 	NSString* audioPath = [command.arguments objectAtIndex:0];
     
-	NSURL* audioURL = [[NSURL alloc]initWithString:audioPath];
+	NSURL* audioURL = [NSURL URLWithString:audioPath];
 	AVURLAsset* audioAsset = [[AVURLAsset alloc] initWithURL:audioURL options:nil];
     AVAssetExportSession* exportSession = [[AVAssetExportSession alloc] initWithAsset:audioAsset presetName:AVAssetExportPresetAppleM4A];
 	
