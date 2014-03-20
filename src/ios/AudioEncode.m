@@ -18,7 +18,7 @@
 	self.callbackId = command.callbackId;
 	NSString* audioPath = [command.arguments objectAtIndex:0];
     
-	NSURL* audioURL = [NSURL initWithString:audioPath];
+	NSURL* audioURL = [[NSURL alloc]initWithString:audioPath];
 	AVURLAsset* audioAsset = [[AVURLAsset alloc] initWithURL:audioURL options:nil];
     AVAssetExportSession* exportSession = [[AVAssetExportSession alloc] initWithAsset:audioAsset presetName:AVAssetExportPresetAppleM4A];
 	
