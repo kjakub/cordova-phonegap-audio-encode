@@ -3,8 +3,17 @@
  * Updated Oct 2012 by Keenan Wyrobek for Cordova 2.1.0
  * Updated November 2013 by John Croucher for Cordova 3.0
  * Updated January 2014 by Tomas Krones for Cordova 3.3
+ * Updated docs in October 2014 by Jakub Kuchar for Appgyver 3.5.2 iOS build
 
 ## Works with Phonegap/Cordova 3.1.0 3.2.0 3.3.0 ##
+
+## Integration to Appgyver cost me a lot fighting with filesystem this is one solution##
+ * add `<preference name="iosExtraFilesystems" value="documents" />` into config.xml
+ * cordova's media recording object and it's path point to `"documents://record.wav"`
+ * request PERSISTENT storage e.g `window.requestFileSystem(window.LocalFileSystem.PERSISTENT,...`
+ * get entry using just it's name `fs.root.getFile("record.wav",...)`
+ * use `entry.toURL()` into encoding method
+ * get encoded file just again using it's name `fs.root.getFile("record.m4a",...)`
 
 ## About this Plugin ##
 
