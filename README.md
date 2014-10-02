@@ -1,4 +1,4 @@
-## PhoneGap AudioEncode Plugin ##
+## PhoneGap AudioEncode Plugin (works on Appgyver 3.5.2 iOS build) ##
  * by Lyle Pratt
  * Updated Oct 2012 by Keenan Wyrobek for Cordova 2.1.0
  * Updated November 2013 by John Croucher for Cordova 3.0
